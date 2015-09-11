@@ -1,14 +1,15 @@
-#include "HelloWorldScene.h"
+#include "StartScene.h"
+#include "OC-callGameInfo.h"
 
 USING_NS_CC;
 
-Scene* HelloWorld::createScene()
+Scene* Start::createScene()
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = HelloWorld::create();
+    auto layer = Start::create();
 
     // add layer as a child to scene
     scene->addChild(layer);
@@ -18,7 +19,7 @@ Scene* HelloWorld::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool HelloWorld::init()
+bool Start::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -29,7 +30,8 @@ bool HelloWorld::init()
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
-
+    
+    sayHello();
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
@@ -38,7 +40,7 @@ bool HelloWorld::init()
     auto closeItem = MenuItemImage::create(
                                            "CloseNormal.png",
                                            "CloseSelected.png",
-                                           CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+                                           CC_CALLBACK_1(Start::menuCloseCallback, this));
     
 	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
                                 origin.y + closeItem->getContentSize().height/2));
@@ -76,7 +78,7 @@ bool HelloWorld::init()
 }
 
 
-void HelloWorld::menuCloseCallback(Ref* pSender)
+void Start::menuCloseCallback(Ref* pSender)
 {
     Director::getInstance()->end();
 

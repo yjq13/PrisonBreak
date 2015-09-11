@@ -11,14 +11,14 @@
 	<string>957CFCB5-D61F-4147-A579-1E962B1754D3</string>
 >>>>>>> origin/master
 	<key>IDESourceControlProjectName</key>
-	<string>PrisonBreak</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C9E70E598B4C31F954F96EE39FDC642BC1EDB809</key>
 		<string>https://github.com/yjq13/PrisonBreak.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PrisonBreak/proj.ios_mac/PrisonBreak.xcodeproj</string>
+	<string>PrisonBreak/proj.ios_mac/PrisonBreak.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C9E70E598B4C31F954F96EE39FDC642BC1EDB809</key>
