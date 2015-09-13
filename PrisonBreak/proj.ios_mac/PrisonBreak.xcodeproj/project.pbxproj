@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04EA12941BA478B400B3FAA1 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04EA12911BA478B400B3FAA1 /* 01.jpg */; };
+		04EA12951BA478B400B3FAA1 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04EA12921BA478B400B3FAA1 /* 02.jpg */; };
+		04EA12961BA478B400B3FAA1 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04EA12931BA478B400B3FAA1 /* 03.jpg */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -136,6 +139,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04EA12911BA478B400B3FAA1 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
+		04EA12921BA478B400B3FAA1 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		04EA12931BA478B400B3FAA1 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -487,6 +493,9 @@
 		E3586F0E1BA2D697009A40A4 /* UIPicture */ = {
 			isa = PBXGroup;
 			children = (
+				04EA12911BA478B400B3FAA1 /* 01.jpg */,
+				04EA12921BA478B400B3FAA1 /* 02.jpg */,
+				04EA12931BA478B400B3FAA1 /* 03.jpg */,
 			);
 			name = UIPicture;
 			sourceTree = "<group>";
@@ -604,8 +613,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3586F151BA2D732009A40A4 /* FigureInfo.plist in Resources */,
+				04EA12961BA478B400B3FAA1 /* 03.jpg in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				04EA12951BA478B400B3FAA1 /* 02.jpg in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				E3586F121BA2D716009A40A4 /* SystemInfo.plist in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
@@ -629,6 +640,7 @@
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				04EA12941BA478B400B3FAA1 /* 01.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
