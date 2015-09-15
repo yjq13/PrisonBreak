@@ -14,7 +14,7 @@
 GameVo getGameInfo(int step){
     GameVo vo;
     GamePo *po;
-    GameInfo_get *Gget = [[GameInfo_get alloc]init];
+    GameInfo_deal *Gget = [[GameInfo_deal alloc]init];
     po = [Gget getGameInfoData:step];
     vo.setData((NSInteger)po.step,(NSInteger)po.state,(NSInteger)po.time);
     return vo;

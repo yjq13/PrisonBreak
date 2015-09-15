@@ -13,7 +13,7 @@
 
 class GameVo;
 
-GameVo getGameInfo(int setNumber);
+GameVo getGameInfo(int);
     
 
 #endif

@@ -13,7 +13,7 @@
 FigureVo getFigureInfo(){
     FigureVo vo;
     FigurePo *po;
-    FigureInfo_get *Fget = [[FigureInfo_get alloc]init];
+    FigureInfo_deal *Fget = [[FigureInfo_deal alloc]init];
     po = [Fget getFigureInfoData];
     vo.setData((NSInteger)po.LV,(NSInteger)po.speed);
     return vo;

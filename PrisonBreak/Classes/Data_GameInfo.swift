@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class GameInfo_get: NSObject {
+class GameInfo_deal: NSObject {
     func getGameInfoData(step:Int)->GamePo{
         var dict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("GameInfo", ofType: "plist")!)
         

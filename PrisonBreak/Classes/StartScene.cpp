@@ -1,8 +1,8 @@
 #include "StartScene.h"
 
-#include "OC_callGameInfo.h"
+#include "OC_callSystemInfo.h"
 #include "GameCommonScene.h"
-#include "GameVo.h"
+#include "SystemVo.h"
 
 USING_NS_CC;
 
@@ -30,9 +30,22 @@ bool Start::init()
     {
         return false;
     }
-    
-    GameVo vo = getGameInfo(1);
-    printf("step:%d ",vo._step);
+   
+    SystemVo vo;
+    vo = getSystemInfo();
+    if(vo._sound==true&&vo._voice==true){
+        printf("it is true\n");
+    }
+    vo.setData(false,false);
+    if(vo._voice==false){
+        printf("vo is setted\n");
+    }
+    printf("info set\n");
+    setSystemInfo(vo);
+    SystemVo voNew = getSystemInfo();
+    if(voNew._sound==false){
+        printf("you set it fasle\n");
+    }
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     

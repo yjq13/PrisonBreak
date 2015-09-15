@@ -11,4 +11,5 @@
 class SystemVo;
 
 SystemVo getSystemInfo();
+void setSystemInfo(SystemVo);
 #endif

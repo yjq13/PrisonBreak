@@ -12,8 +12,16 @@
 SystemVo getSystemInfo(){
     SystemVo vo;
     SystemPo *po;
-    SystemInfo_get *Sget = [[SystemInfo_get alloc]init];
+    SystemInfo_deal *Sget = [[SystemInfo_deal alloc]init];
     po = [Sget getSystemInfoData];
     vo.setData(po.voice,po.sound);
     return vo;
+}
+
+void setSystemInfo(SystemVo vo){
+    SystemPo *po = [SystemPo alloc];
+    [po initWithVoice:vo._voice sound:vo._sound];
+    SystemInfo_deal *Swrite = [[SystemInfo_deal alloc]init];
+    [Swrite writeSystemInfoData:po];
+    
 }

@@ -12,8 +12,9 @@ class SystemPo: NSObject {
     var voice:Bool
     
     var sound:Bool
-    
+
     init(voice:Bool,sound:Bool){
+        
         self.voice=voice
         self.sound=sound
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FigureInfo_get: NSObject {
+class FigureInfo_deal: NSObject {
     func getFigureInfoData()->FigurePo{
         var dict1 = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("FigureInfo", ofType: "plist")!)
         

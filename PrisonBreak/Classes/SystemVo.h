@@ -11,7 +11,6 @@
 
 
 class SystemVo{
-    
 public:
     bool _voice;
     bool _sound;

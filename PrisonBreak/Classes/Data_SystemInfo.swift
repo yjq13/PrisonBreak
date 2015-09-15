@@ -8,10 +8,8 @@
 
 import Foundation
 
-class SystemInfo_get: NSObject {
+class SystemInfo_deal: NSObject {
     func getSystemInfoData()->SystemPo{
-        var dict1 = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("SystemInfo", ofType: "plist")!)
-        
             let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
             let documentsDirectory = paths.objectAtIndex(0) as! NSString
             let path = documentsDirectory.stringByAppendingPathComponent("SystemInfo.plist")
@@ -22,5 +20,17 @@ class SystemInfo_get: NSObject {
             var Gpo : SystemPo =  SystemPo(voice:_voice,sound:_sound)
             return Gpo
             }
+    
+    func writeSystemInfoData(po:SystemPo){
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths.objectAtIndex(0) as! NSString
+        let path = documentsDirectory.stringByAppendingPathComponent("SystemInfo.plist")
+        var dict = NSMutableDictionary(contentsOfFile: path)
 
+        dict?.setObject(po.voice, forKey: "voice")
+        dict?.setObject(po.sound, forKey: "sound")
+        
+        dict?.writeToFile(path, atomically: false)
+
+    }
 }
