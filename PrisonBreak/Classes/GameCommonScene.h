@@ -10,15 +10,19 @@
 #define __PrisonBreak__GameCommonScene__
 
 #include "cocos2d.h"
-class Game : public cocos2d::Layer{
+USING_NS_CC;
+class Game : public Layer{
 public:
-    static cocos2d::Scene* createScene();
+    static Scene* createScene();
     
     virtual bool init();
     
     // a selector callback
     void setUI();
     
+    //触屏测试
+    CCSprite* sprite;
+    //重载触控函数
     // implement the "static create()" method manually
     CREATE_FUNC(Game);
 };

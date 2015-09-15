@@ -32,9 +32,9 @@ void Game::setUI(){
                             origin.y + visibleSize.height - gameLabel->getContentSize().height));
     this->addChild(gameLabel);
     
-    auto image=MenuItemImage::create("02.jpg", "01.jpg");
-    image->setPosition(100, 100);
-    auto menu=Menu::create(image,NULL);
+    auto image1=MenuItemImage::create("01.jpg", "01.jpg");
+    image1->setPosition(100, 100);
+    auto menu=Menu::create(image1,NULL);
     menu->setPosition(100,100);
     this->addChild(menu,1);
     
@@ -43,10 +43,23 @@ void Game::setUI(){
                                           origin.y + visibleSize.height - gameLabel->getContentSize().height-200));
     auto action=Sequence::create(moveTo,Spawn::create(RotateBy::create(1.0f,360),ScaleTo::create(1.0f,1.2f),NULL),Blink::create(1,5),FadeOut::create(0.5f), NULL);
     
-    gameLabel->runAction(action);
+    image1->runAction(action);
     
     //下面测试动画的实现
     
+    
+    //下面测试触控
+    this->setTouchEnabled(true);
+    sprite=CCSprite::create("03.jpg");
+    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    sprite->setScale(1, 0.5);
+    this->addChild(sprite,1);
+    
+    
+    auto listener=EventListenerTouchAllAtOnce::create();
+    listener->onTouchesMoved=[](Touch* touch,Event* event){
+        
+    }
     
     
 }
