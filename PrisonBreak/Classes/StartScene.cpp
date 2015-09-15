@@ -1,8 +1,9 @@
 #include "StartScene.h"
 
-#include "OC-callGameInfo.h"
+#include "OC_callGameInfo.h"
 #include "GameCommonScene.h"
->>>>>>> origin/master
+#include "GameVo.h"
+
 USING_NS_CC;
 
 Scene* Start::createScene()
