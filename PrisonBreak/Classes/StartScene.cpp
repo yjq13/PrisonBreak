@@ -31,7 +31,7 @@ bool Start::init()
         return false;
     }
     
-    GameVo vo = getGameInfo(0);
+    GameVo vo = getGameInfo(1);
     printf("step:%d ",vo._step);
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
