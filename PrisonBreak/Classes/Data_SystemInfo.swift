@@ -9,7 +9,10 @@
 import Foundation
 
 class SystemInfo_get: NSObject {
-    func sayHello(){
-        println("HELLO!!!!!")
+    func getSystemInfoData()->SystemPo{
+        
+        var Gpo : SystemPo =  SystemPo(voice:true,sound:true)
+        return Gpo
     }
+
 }

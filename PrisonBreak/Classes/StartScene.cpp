@@ -1,6 +1,6 @@
 #include "StartScene.h"
-#include "OC-callGameInfo.h"
-
+#include "OC_callGameInfo.h"
+#include "GameVo.h"
 USING_NS_CC;
 
 Scene* Start::createScene()
@@ -28,10 +28,11 @@ bool Start::init()
         return false;
     }
     
+    GameVo vo = getGameInfo(0);
+    printf("step:%d ",vo._step);
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    sayHello();
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.

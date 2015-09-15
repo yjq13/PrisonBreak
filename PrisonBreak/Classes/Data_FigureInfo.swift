@@ -9,7 +9,9 @@
 import Foundation
 
 class FigureInfo_get: NSObject {
-    func sayHello(){
-        println("HELLO!!!!!")
+    func getFigureInfoData()->FigurePo{
+        
+        var Gpo : FigurePo =  FigurePo(LV:1,speed:0)
+        return Gpo
     }
 }

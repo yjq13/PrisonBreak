@@ -7,9 +7,10 @@
 //
 
 import Foundation
-
 class GameInfo_get: NSObject {
-    func sayHello(){
-        println("HELLO!!!!!")
+    func getGameInfoData()->GamePo{
+        
+        var Gpo : GamePo =  GamePo(step:13,state:0,time:0)
+        return Gpo
     }
 }

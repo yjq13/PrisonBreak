@@ -6,8 +6,11 @@
 //
 //
 
+
 #ifndef PrisonBreak_OC_callFigureInfo_h
 #define PrisonBreak_OC_callFigureInfo_h
+class FigureVo;
 
+FigureVo getSystemInfo();
 
 #endif

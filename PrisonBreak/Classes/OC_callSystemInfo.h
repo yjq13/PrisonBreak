@@ -8,6 +8,7 @@
 
 #ifndef PrisonBreak_OC_callSystemInfo_h
 #define PrisonBreak_OC_callSystemInfo_h
+class SystemVo;
 
-
+SystemVo getSystemInfo();
 #endif

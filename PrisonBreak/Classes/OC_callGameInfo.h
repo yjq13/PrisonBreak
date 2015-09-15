@@ -4,10 +4,20 @@
 //
 //  Created by yjq131250077 on 15/9/11.
 //
-//
+//>
+
 
 #ifndef PrisonBreak_OC_callGameInfo_h
 #define PrisonBreak_OC_callGameInfo_h
+#include <stdio.h>
 
-void sayHello();
+class GameVo;
+
+GameVo getGameInfo(int setNumber);
+    
+
 #endif
+
+
+
+
