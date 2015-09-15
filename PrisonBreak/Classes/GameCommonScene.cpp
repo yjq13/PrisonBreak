@@ -64,5 +64,9 @@ void Game::setUI(){
 }
 
 void Game::onTouchesMoved(const std::vector<Touch *> &touches, cocos2d::Event *event){
-    CCLOG("asdasdasdasd");
+    for(auto &item: touches){
+        auto touch=item;
+        auto location=touch->getLocation();
+        CCLOG("%f",location.x);
+    }
 }
