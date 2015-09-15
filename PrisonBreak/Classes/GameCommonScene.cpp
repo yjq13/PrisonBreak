@@ -49,7 +49,6 @@ void Game::setUI(){
     
     
     //下面测试触控
-    this->setTouchEnabled(true);
     sprite=CCSprite::create("03.jpg");
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     sprite->setScale(1, 0.5);
@@ -57,9 +56,13 @@ void Game::setUI(){
     
     
     auto listener=EventListenerTouchAllAtOnce::create();
-    listener->onTouchesMoved=[](Touch* touch,Event* event){
-        
-    }
+    listener->onTouchesMoved=CC_CALLBACK_2(Game::onTouchesMoved, this);
+    listener->onTouchesBegan=CC_CALLBACK_2(Game::onTouchesBegan, this);
+    listener->onTouchesEnded=CC_CALLBACK_2(Game::onTouchesEnded, this);
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
-    
+}
+
+void Game::onTouchesMoved(const std::vector<Touch *> &touches, cocos2d::Event *event){
+    CCLOG("asdasdasdasd");
 }
