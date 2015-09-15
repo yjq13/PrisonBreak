@@ -10,5 +10,5 @@
 void FigureVo::setData(int LV,int speed){
     _LV = LV;
     _speed = speed;
-    printf("Hello!!!\n");
+    //printf("Hello!!!\n");
 }

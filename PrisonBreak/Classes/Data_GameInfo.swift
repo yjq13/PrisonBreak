@@ -8,9 +8,16 @@
 
 import Foundation
 class GameInfo_get: NSObject {
-    func getGameInfoData()->GamePo{
+    func getGameInfoData(step:Int)->GamePo{
+        var dict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("GameInfo", ofType: "plist")!)
         
-        var Gpo : GamePo =  GamePo(step:13,state:0,time:0)
+        var valueArr:AnyObject? = dict?.objectForKey("Game_\(step)")!
+        var _step: Int = valueArr?.objectForKey("step") as! Int
+        var _state: Int = valueArr?.objectForKey("state") as! Int
+        var _time: Int = valueArr?.objectForKey("time") as! Int
+
+        
+        var Gpo : GamePo =  GamePo(step:_step,state:_state,time:_time)
         return Gpo
     }
 }

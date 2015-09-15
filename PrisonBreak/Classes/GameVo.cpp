@@ -12,5 +12,5 @@ void GameVo::setData(int step,int state,int time){
     _step = step;
     _state = state;
     _time = time;
-    printf("Hello!!!\n");
+   // printf("Hello!!!\n");
 }
