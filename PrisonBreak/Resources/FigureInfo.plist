@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>gold_coin</key>
+	<integer>0</integer>
+	<key>diamond</key>
+	<integer>0</integer>
 	<key>LV</key>
 	<integer>0</integer>
 	<key>speed</key>

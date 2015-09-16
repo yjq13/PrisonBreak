@@ -23,5 +23,9 @@ void setSystemInfo(SystemVo vo){
     [po initWithVoice:vo._voice sound:vo._sound];
     SystemInfo_deal *Swrite = [[SystemInfo_deal alloc]init];
     [Swrite writeSystemInfoData:po];
-    
+}
+
+void initDocuments(){
+    initDocument *initD = [[initDocument alloc]init];
+    [initD initDoc];
 }

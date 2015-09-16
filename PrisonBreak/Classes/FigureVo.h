@@ -16,7 +16,9 @@ class FigureVo{
 public:
     int _LV;
     int _speed;
-    void setData(int,int);
+    int _gold_coin;
+    int _diamond;
+    void setData(int,int,int,int);
 };
 
 #endif /* defined(__PrisonBreak__FigureVo__) */

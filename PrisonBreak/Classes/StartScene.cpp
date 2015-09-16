@@ -30,7 +30,7 @@ bool Start::init()
     {
         return false;
     }
-   
+    initDocuments();
     SystemVo vo;
     vo = getSystemInfo();
     if(vo._sound==true&&vo._voice==true){

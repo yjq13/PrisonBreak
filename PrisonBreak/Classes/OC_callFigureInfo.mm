@@ -15,6 +15,6 @@ FigureVo getFigureInfo(){
     FigurePo *po;
     FigureInfo_deal *Fget = [[FigureInfo_deal alloc]init];
     po = [Fget getFigureInfoData];
-    vo.setData((NSInteger)po.LV,(NSInteger)po.speed);
+    vo.setData(po.LV,po.speed,po.gold_coin,po.diamond);
     return vo;
 }

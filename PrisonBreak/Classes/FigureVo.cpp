@@ -7,8 +7,10 @@
 //
 
 #include "FigureVo.h"
-void FigureVo::setData(int LV,int speed){
+void FigureVo::setData(int LV,int speed,int gold_coin,int diamond){
     _LV = LV;
     _speed = speed;
+    _gold_coin = gold_coin;
+    _diamond = diamond;
     //printf("Hello!!!\n");
 }

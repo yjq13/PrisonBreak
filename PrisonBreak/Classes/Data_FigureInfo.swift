@@ -10,7 +10,7 @@ import Foundation
 
 class FigureInfo_deal: NSObject {
     func getFigureInfoData()->FigurePo{
-        var dict1 = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("FigureInfo", ofType: "plist")!)
+        //var dict1 = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("FigureInfo", ofType: "plist")!)
         
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as! NSString
@@ -19,8 +19,10 @@ class FigureInfo_deal: NSObject {
         
         var _LV:Int = dict?.objectForKey("LV") as! Int
         var _speed:Int = dict?.objectForKey("speed") as! Int
+        var _gold_coin:Int = dict?.objectForKey("gold_coin") as! Int
+        var _diamond:Int = dict?.objectForKey("diamond") as! Int
         
-        var Gpo : FigurePo =  FigurePo(LV:_LV,speed:_speed)
+        var Gpo : FigurePo =  FigurePo(LV: _LV, speed: _speed, gold_coin: _gold_coin, diamond: _diamond)
         return Gpo
     }
 }

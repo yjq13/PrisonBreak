@@ -11,5 +11,8 @@
 class SystemVo;
 
 SystemVo getSystemInfo();
+
 void setSystemInfo(SystemVo);
+
+void initDocuments();
 #endif
