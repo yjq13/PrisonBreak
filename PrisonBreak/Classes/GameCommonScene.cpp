@@ -19,11 +19,15 @@ bool Game::init(){
     if(!Layer::init()){
         return false;
     }
+//    points->addControlPoint(Vec2(100, 100));
+//    points->addControlPoint(Vec2(100, 100));
+//    CCLOG("%zd",points->count());
+    points=PointArray::create(1000);
     setUI();
     return true;
 }
 void Game::setUI(){
-    
+    //addPoint(Vec2(0, 0));
 //测试在界面上放置组件
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
@@ -39,11 +43,11 @@ void Game::setUI(){
     this->addChild(menu,1);
     
     //下面 测试节点的运动
-    auto moveTo=MoveTo::create(3.0f, Vec2(origin.x + visibleSize.width/2,
-                                          origin.y + visibleSize.height - gameLabel->getContentSize().height-200));
-    auto action=Sequence::create(moveTo,Spawn::create(RotateBy::create(1.0f,360),ScaleTo::create(1.0f,1.2f),NULL),Blink::create(1,5),FadeOut::create(0.5f), NULL);
+//    auto moveTo=MoveTo::create(3.0f, Vec2(origin.x + visibleSize.width/2,
+//                                          origin.y + visibleSize.height - gameLabel->getContentSize().height-200));
+    //auto action=Sequence::create(moveTo,Spawn::create(RotateBy::create(1.0f,360),ScaleTo::create(1.0f,1.2f),NULL),Blink::create(1,5),FadeOut::create(0.5f), NULL);
     
-    image1->runAction(action);
+    //image1->runAction(action);
     
     //下面测试动画的实现
     
@@ -55,18 +59,35 @@ void Game::setUI(){
     this->addChild(sprite,1);
     
     
-    auto listener=EventListenerTouchAllAtOnce::create();
-    listener->onTouchesMoved=CC_CALLBACK_2(Game::onTouchesMoved, this);
-    listener->onTouchesBegan=CC_CALLBACK_2(Game::onTouchesBegan, this);
-    listener->onTouchesEnded=CC_CALLBACK_2(Game::onTouchesEnded, this);
+    auto listener=EventListenerTouchOneByOne::create();
+    listener->onTouchMoved=CC_CALLBACK_2(Game::onTouchMoved, this);
+    listener->onTouchBegan=CC_CALLBACK_2(Game::onTouchBegan, this);
+    listener->onTouchEnded=CC_CALLBACK_2(Game::onTouchEnded, this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
 }
 
-void Game::onTouchesMoved(const std::vector<Touch *> &touches, cocos2d::Event *event){
-    for(auto &item: touches){
-        auto touch=item;
+bool Game::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event){
+    CCLOG("begin");
+    return true;
+}
+void Game::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event){
+    //坑了爹的point竟然不能共享
         auto location=touch->getLocation();
-        CCLOG("%f",location.x);
-    }
+        CCLOG("(%f,%f)",location.x,location.y);
+   // point=PointArray::create(1000);
+    //points->addControlPoint(touch->getLocation());
+    points=PointArray::create(1000);
+    points->addControlPoint(touch->getLocation());
+    CCLOG("%zd",this->points->count());
+    //addPoint(location);
+    
+}
+
+void Game::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event){
+    printf("ed");
+}
+void Game::addPoint(Vec2 p){
+    points->addControlPoint(p);
+    CCLOG("asdasd");
 }

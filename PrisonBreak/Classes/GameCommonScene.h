@@ -23,10 +23,14 @@ public:
     //触屏测试
     CCSprite* sprite;
     //重载触控函数
-//    void onTouchesBegan(const std::vector<Touch*>& touches, cocos2d::Event  *event);
-    void onTouchesMoved(const std::vector<Touch*>& touches, cocos2d::Event  *event);
-//    void onTouchesEnded(const std::vector<Touch*>& touches, cocos2d::Event  *event);
-//    void onTouchesCancelled(const std::vector<Touch*>& touches, cocos2d::Event  *event);
+    PointArray* points;//=PointArray::create(10000);//手指画出来的点集
+    
+    bool onTouchBegan(Touch* touch,Event* event);
+    void onTouchMoved(Touch* touch,Event* event);
+    void onTouchEnded(Touch* touch,Event* event);
+    void addPoint(Vec2 p);
+   // void onTouchCancel(Touch* touch,Event* event);
+    //测试用数组
     
     // implement the "static create()" method manually
     CREATE_FUNC(Game);
