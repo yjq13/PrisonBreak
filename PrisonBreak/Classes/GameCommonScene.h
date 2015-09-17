@@ -23,15 +23,13 @@ public:
     //触屏测试
     CCSprite* sprite;
     //重载触控函数
-    PointArray* points;//=PointArray::create(10000);//手指画出来的点集
-    
+    Point points[10000];//手指画出来的点集
+    int index;//计数器
     bool onTouchBegan(Touch* touch,Event* event);
     void onTouchMoved(Touch* touch,Event* event);
     void onTouchEnded(Touch* touch,Event* event);
-    void addPoint(Vec2 p);
    // void onTouchCancel(Touch* touch,Event* event);
-    //测试用数组
-    
+    bool isMoved;//用于判断是否画完线路
     // implement the "static create()" method manually
     CREATE_FUNC(Game);
 };
