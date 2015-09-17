@@ -102,14 +102,14 @@
 		E3D4DEB21BA79AAB00035E36 /* GamePo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4DEB11BA79AAB00035E36 /* GamePo.swift */; };
 		E3D4DEB41BA7A27C00035E36 /* SystemPo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4DEB31BA7A27C00035E36 /* SystemPo.swift */; };
 		E3D4DEB61BA7A3F100035E36 /* FigurePo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4DEB51BA7A3F100035E36 /* FigurePo.swift */; };
+		E3D60BFA1BAAEF2700F281D6 /* setScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D60BF81BAAEF2700F281D6 /* setScene.cpp */; };
+		E3D60BFF1BAB043400F281D6 /* Constant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3D60BFD1BAB043400F281D6 /* Constant.cpp */; };
 		E3E766FC1BA33B4A005F8480 /* GameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3E766FA1BA33B4A005F8480 /* GameController.cpp */; };
 		E3E766FD1BA33B4A005F8480 /* GameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3E766FA1BA33B4A005F8480 /* GameController.cpp */; };
 		E3E766FF1BA33BC3005F8480 /* Data_SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E766FE1BA33BC3005F8480 /* Data_SystemInfo.swift */; };
 		E3E767001BA33BC3005F8480 /* Data_SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E766FE1BA33BC3005F8480 /* Data_SystemInfo.swift */; };
 		E3E767021BA33BDB005F8480 /* Data_FigureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E767011BA33BDB005F8480 /* Data_FigureInfo.swift */; };
 		E3E767031BA33BDB005F8480 /* Data_FigureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E767011BA33BDB005F8480 /* Data_FigureInfo.swift */; };
-		E3E767051BA33BEC005F8480 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E767041BA33BEC005F8480 /* Constants.swift */; };
-		E3E767061BA33BEC005F8480 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E767041BA33BEC005F8480 /* Constants.swift */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
 /* End PBXBuildFile section */
@@ -241,11 +241,14 @@
 		E3D4DEB11BA79AAB00035E36 /* GamePo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePo.swift; sourceTree = "<group>"; };
 		E3D4DEB31BA7A27C00035E36 /* SystemPo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemPo.swift; sourceTree = "<group>"; };
 		E3D4DEB51BA7A3F100035E36 /* FigurePo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FigurePo.swift; sourceTree = "<group>"; };
+		E3D60BF81BAAEF2700F281D6 /* setScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = setScene.cpp; sourceTree = "<group>"; };
+		E3D60BF91BAAEF2700F281D6 /* setScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setScene.h; sourceTree = "<group>"; };
+		E3D60BFD1BAB043400F281D6 /* Constant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constant.cpp; sourceTree = "<group>"; };
+		E3D60BFE1BAB043400F281D6 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		E3E766FA1BA33B4A005F8480 /* GameController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameController.cpp; sourceTree = "<group>"; };
 		E3E766FB1BA33B4A005F8480 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		E3E766FE1BA33BC3005F8480 /* Data_SystemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data_SystemInfo.swift; sourceTree = "<group>"; };
 		E3E767011BA33BDB005F8480 /* Data_FigureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data_FigureInfo.swift; sourceTree = "<group>"; };
-		E3E767041BA33BEC005F8480 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -451,6 +454,8 @@
 			isa = PBXGroup;
 			children = (
 				E3586EFE1BA2CD53009A40A4 /* GameSecne */,
+				E3D60BF81BAAEF2700F281D6 /* setScene.cpp */,
+				E3D60BF91BAAEF2700F281D6 /* setScene.h */,
 				46880B8619C43A87006E1F66 /* StartScene.cpp */,
 				46880B8719C43A87006E1F66 /* StartScene.h */,
 				E3586EE61BA2C65C009A40A4 /* ShopScene.cpp */,
@@ -494,6 +499,7 @@
 		E3586F001BA2CF33009A40A4 /* DATA */ = {
 			isa = PBXGroup;
 			children = (
+				E3D045C41BA96DC900F6F321 /* initDocuments.swift */,
 				E36FBB311BA2F555006C84A0 /* Data_GameInfo.swift */,
 				E3E766FE1BA33BC3005F8480 /* Data_SystemInfo.swift */,
 				E3E767011BA33BDB005F8480 /* Data_FigureInfo.swift */,
@@ -504,8 +510,8 @@
 		E3586F011BA2CF80009A40A4 /* UTIL */ = {
 			isa = PBXGroup;
 			children = (
-				E3E767041BA33BEC005F8480 /* Constants.swift */,
-				E3D045C41BA96DC900F6F321 /* initDocuments.swift */,
+				E3D60BFD1BAB043400F281D6 /* Constant.cpp */,
+				E3D60BFE1BAB043400F281D6 /* Constant.h */,
 			);
 			name = UTIL;
 			sourceTree = "<group>";
@@ -712,7 +718,6 @@
 			files = (
 				E3D045C51BA96DC900F6F321 /* initDocuments.swift in Sources */,
 				E36FBB191BA2DB64006C84A0 /* OC_callFigureInfo.mm in Sources */,
-				E3E767051BA33BEC005F8480 /* Constants.swift in Sources */,
 				E3586EFC1BA2CD35009A40A4 /* GameCommonSprite.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* StartScene.cpp in Sources */,
@@ -728,6 +733,7 @@
 				E3586F1E1BA2DA6A009A40A4 /* OC_callSystemInfo.mm in Sources */,
 				E3586F1B1BA2D8F5009A40A4 /* OC_callGameInfo.mm in Sources */,
 				E3586EF01BA2C772009A40A4 /* CourseScene.cpp in Sources */,
+				E3D60BFF1BAB043400F281D6 /* Constant.cpp in Sources */,
 				E3586EF41BA2CBBB009A40A4 /* AnimationScene.cpp in Sources */,
 				E3D4DE9E1BA766DA00035E36 /* GameVo.cpp in Sources */,
 				E3D4DEA81BA7906E00035E36 /* SystemVo.cpp in Sources */,
@@ -736,6 +742,7 @@
 				E36FBB321BA2F555006C84A0 /* Data_GameInfo.swift in Sources */,
 				E3D4DEB61BA7A3F100035E36 /* FigurePo.swift in Sources */,
 				E3E766FC1BA33B4A005F8480 /* GameController.cpp in Sources */,
+				E3D60BFA1BAAEF2700F281D6 /* setScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -750,7 +757,6 @@
 				E3E767031BA33BDB005F8480 /* Data_FigureInfo.swift in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				E3586EFD1BA2CD35009A40A4 /* GameCommonSprite.cpp in Sources */,
-				E3E767061BA33BEC005F8480 /* Constants.swift in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				E36FBB1A1BA2DB64006C84A0 /* OC_callFigureInfo.mm in Sources */,
 				E3586EE91BA2C65C009A40A4 /* ShopScene.cpp in Sources */,
