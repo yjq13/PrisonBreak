@@ -25,4 +25,20 @@ class FigureInfo_deal: NSObject {
         var Gpo : FigurePo =  FigurePo(LV: _LV, speed: _speed, gold_coin: _gold_coin, diamond: _diamond)
         return Gpo
     }
+    
+    func writeFigureInfoData(po:FigurePo){
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
+        let documentsDirectory = paths.objectAtIndex(0) as! NSString
+        let path = documentsDirectory.stringByAppendingPathComponent("FigureInfo.plist")
+        var dict = NSMutableDictionary(contentsOfFile: path)
+        
+        dict?.setObject(po.speed, forKey: "speed")
+        dict?.setObject(po.LV, forKey: "LV")
+        dict?.setObject(po.gold_coin, forKey: "gold_coin")
+        dict?.setObject(po.diamond, forKey: "diamond")
+        
+        
+        dict?.writeToFile(path, atomically: false)
+        
+    }
 }

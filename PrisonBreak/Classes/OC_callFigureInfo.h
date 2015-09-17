@@ -13,4 +13,5 @@ class FigureVo;
 
 FigureVo getSystemInfo();
 
+void setFigureInfo(FigureVo);
 #endif

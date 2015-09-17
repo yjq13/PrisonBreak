@@ -18,3 +18,10 @@ FigureVo getFigureInfo(){
     vo.setData(po.LV,po.speed,po.gold_coin,po.diamond);
     return vo;
 }
+
+void setSystemInfo(FigureVo vo){
+    FigurePo *po = [FigurePo alloc];
+    [po initWithLV:vo._LV speed:vo._speed gold_coin:vo._gold_coin diamond:vo._diamond];
+    FigureInfo_deal *Swrite = [[FigureInfo_deal alloc]init];
+    [Swrite writeFigureInfoData:po];
+}
