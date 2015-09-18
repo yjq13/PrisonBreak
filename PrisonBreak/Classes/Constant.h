@@ -10,5 +10,17 @@
 #define __PrisonBreak__Constant__
 
 #include <stdio.h>
+class Constant{
+public:
+    bool VOICE;
+    bool SOUND;
+    int GOLD_COIN;
+    int DIAMOND;
+    int SPEED;
+    int LV;
+    int STEP;
+    void setConstant();
+};
 
+static Constant ALLINFO;
 #endif /* defined(__PrisonBreak__Constant__) */

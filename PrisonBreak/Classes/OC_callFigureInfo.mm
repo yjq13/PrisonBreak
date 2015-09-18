@@ -15,13 +15,13 @@ FigureVo getFigureInfo(){
     FigurePo *po;
     FigureInfo_deal *Fget = [[FigureInfo_deal alloc]init];
     po = [Fget getFigureInfoData];
-    vo.setData(po.LV,po.speed,po.gold_coin,po.diamond);
+    vo.setData(po.LV,po.step,po.speed,po.gold_coin,po.diamond);
     return vo;
 }
 
-void setSystemInfo(FigureVo vo){
+void setFigureInfo(FigureVo vo){
     FigurePo *po = [FigurePo alloc];
-    [po initWithLV:vo._LV speed:vo._speed gold_coin:vo._gold_coin diamond:vo._diamond];
+    [po initWithLV:vo._LV step:vo._step speed:vo._speed gold_coin:vo._gold_coin diamond:vo._diamond];
     FigureInfo_deal *Swrite = [[FigureInfo_deal alloc]init];
     [Swrite writeFigureInfoData:po];
 }

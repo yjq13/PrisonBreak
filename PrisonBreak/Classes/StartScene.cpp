@@ -1,8 +1,10 @@
 #include "StartScene.h"
 
+#include "OC_callFigureInfo.h"
 #include "OC_callSystemInfo.h"
 #include "GameCommonScene.h"
-#include "SystemVo.h"
+#include "FigureVo.h"
+#include "Constant.h"
 
 USING_NS_CC;
 
@@ -30,21 +32,25 @@ bool Start::init()
     {
         return false;
     }
+    
     initDocuments();
-    SystemVo vo;
-    vo = getSystemInfo();
-    if(vo._sound==true&&vo._voice==true){
+    //ALLINFO.setConstant();
+    //printf("%d",ALLINFO.STEP);
+    FigureVo vo;
+    vo = getFigureInfo();
+    if(vo._speed==0&&vo._diamond==0){
         printf("it is true\n");
     }
-    vo.setData(false,false);
-    if(vo._voice==false){
+    vo.setData(1,1,1,1,1);
+    if(vo._diamond==1){
         printf("vo is setted\n");
     }
+    
+    setFigureInfo(vo);
     printf("info set\n");
-    setSystemInfo(vo);
-    SystemVo voNew = getSystemInfo();
-    if(voNew._sound==false){
-        printf("you set it fasle\n");
+    FigureVo voNew = getFigureInfo();
+    if(voNew._diamond==1){
+        printf("you set it 1\n");
     }
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();

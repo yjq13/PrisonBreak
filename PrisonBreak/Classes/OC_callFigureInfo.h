@@ -11,7 +11,7 @@
 #define PrisonBreak_OC_callFigureInfo_h
 class FigureVo;
 
-FigureVo getSystemInfo();
+FigureVo getFigureInfo();
 
 void setFigureInfo(FigureVo);
 #endif

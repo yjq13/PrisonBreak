@@ -16,7 +16,10 @@ class FigurePo: NSObject {
     var gold_coin:Int
     
     var diamond:Int
-    init(LV:Int,speed:Int,gold_coin:Int,diamond:Int){
+    
+    var step:Int
+    init(LV:Int,step:Int,speed:Int,gold_coin:Int,diamond:Int){
+        self.step=step
         self.LV=LV
         self.speed=speed
         self.diamond=diamond
