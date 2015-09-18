@@ -13,5 +13,4 @@ void FigureVo::setData(int LV,int step,int speed,int gold_coin,int diamond){
     _speed = speed;
     _gold_coin = gold_coin;
     _diamond = diamond;
-    //printf("Hello!!!\n");
 }

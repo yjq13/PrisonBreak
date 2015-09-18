@@ -34,8 +34,8 @@ bool Start::init()
     }
     
     initDocuments();
-    //ALLINFO.setConstant();
-    //printf("%d",ALLINFO.STEP);
+    ALLINFO.setConstant();
+    printf("%d",ALLINFO.STEP);
     FigureVo vo;
     vo = getFigureInfo();
     if(vo._speed==0&&vo._diamond==0){

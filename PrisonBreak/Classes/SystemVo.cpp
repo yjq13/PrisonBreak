@@ -11,5 +11,4 @@
 void SystemVo::setData(bool voice,bool sound){
     _voice = voice;
     _sound = sound;
-   // printf("Hello!!!\n");
 }
