@@ -34,24 +34,7 @@ bool Start::init()
     }
     
     initDocuments();
-    ALLINFO.setConstant();
-    printf("%d",ALLINFO.STEP);
-    FigureVo vo;
-    vo = getFigureInfo();
-    if(vo._speed==0&&vo._diamond==0){
-        printf("it is true\n");
-    }
-    vo.setData(1,1,1,1,1);
-    if(vo._diamond==1){
-        printf("vo is setted\n");
-    }
     
-    setFigureInfo(vo);
-    printf("info set\n");
-    FigureVo voNew = getFigureInfo();
-    if(voNew._diamond==1){
-        printf("you set it 1\n");
-    }
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     

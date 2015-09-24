@@ -18,28 +18,28 @@ class initDocument : NSObject {
         
         if(!fileManager.fileExistsAtPath(pathS)) {
         
-        var SystemInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("SystemInfo", ofType: "plist")!)
+        let SystemInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("SystemInfo", ofType: "plist")!)
             SystemInfoD?.writeToFile(pathS, atomically: false)
         }else{
-            println("SystemInfoD is ok")
+            print("SystemInfoD is ok")
                     }
         
         
         if(!fileManager.fileExistsAtPath(pathF)) {
-            var FigureInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("FigureInfo", ofType: "plist")!)
+            let FigureInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("FigureInfo", ofType: "plist")!)
             FigureInfoD?.writeToFile(pathF, atomically: false)
         }else{
-            println("FigureInfoD is ok")
+            print("FigureInfoD is ok")
         }
 
 
         
         if(!fileManager.fileExistsAtPath(pathG)) {
             
-            var GameInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("GameInfo", ofType: "plist")!)
+            let GameInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("GameInfo", ofType: "plist")!)
             GameInfoD?.writeToFile(pathG, atomically: false)
         }else{
-            println("GamenfoD is ok")
+            print("GamenfoD is ok")
         }
         
     }
