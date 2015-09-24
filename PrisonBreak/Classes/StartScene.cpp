@@ -1,8 +1,10 @@
 #include "StartScene.h"
 
+#include "OC_callFigureInfo.h"
 #include "OC_callSystemInfo.h"
 #include "GameCommonScene.h"
-#include "SystemVo.h"
+#include "FigureVo.h"
+#include "Constant.h"
 
 USING_NS_CC;
 
@@ -30,22 +32,9 @@ bool Start::init()
     {
         return false;
     }
+    
     initDocuments();
-    SystemVo vo;
-    vo = getSystemInfo();
-    if(vo._sound==true&&vo._voice==true){
-        printf("it is true\n");
-    }
-    vo.setData(false,false);
-    if(vo._voice==false){
-        printf("vo is setted\n");
-    }
-    printf("info set\n");
-    setSystemInfo(vo);
-    SystemVo voNew = getSystemInfo();
-    if(voNew._sound==false){
-        printf("you set it fasle\n");
-    }
+    
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     

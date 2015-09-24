@@ -11,10 +11,12 @@ class initDocument : NSObject {
     func initDoc(){
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as! NSString
-        let path = documentsDirectory.stringByAppendingPathComponent("SystemInfo.plist")
-        
+        let pathS = documentsDirectory.stringByAppendingPathComponent("SystemInfo.plist")
+        let pathG = documentsDirectory.stringByAppendingPathComponent("GameInfo.plist")
+        let pathF = documentsDirectory.stringByAppendingPathComponent("FigureInfo.plist")
         let fileManager = NSFileManager.defaultManager()
         
+<<<<<<< HEAD
         if(!fileManager.fileExistsAtPath(path)) {
         
         let SystemInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("SystemInfo", ofType: "plist")!)
@@ -22,19 +24,39 @@ class initDocument : NSObject {
         let GameInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("GameInfo", ofType: "plist")!)
         
         let FigureInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("FigureInfo", ofType: "plist")!)
+=======
+        if(!fileManager.fileExistsAtPath(pathS)) {
+>>>>>>> origin/master
         
-        
-        let path1 = documentsDirectory.stringByAppendingPathComponent("SystemInfo.plist")
-        let path2 = documentsDirectory.stringByAppendingPathComponent("GameInfo.plist")
-        let path3 = documentsDirectory.stringByAppendingPathComponent("Figure.plist")
-        
-        
-        SystemInfoD?.writeToFile(path1, atomically: false)
-        GameInfoD?.writeToFile(path2, atomically: false)
-        FigureInfoD?.writeToFile(path3, atomically: false)
+        let SystemInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("SystemInfo", ofType: "plist")!)
+            SystemInfoD?.writeToFile(pathS, atomically: false)
         }else{
+            print("SystemInfoD is ok")
+                    }
+        
+        
+        if(!fileManager.fileExistsAtPath(pathF)) {
+            let FigureInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("FigureInfo", ofType: "plist")!)
+            FigureInfoD?.writeToFile(pathF, atomically: false)
+        }else{
+            print("FigureInfoD is ok")
+        }
+
+
+        
+        if(!fileManager.fileExistsAtPath(pathG)) {
+            
+            let GameInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("GameInfo", ofType: "plist")!)
+            GameInfoD?.writeToFile(pathG, atomically: false)
+        }else{
+<<<<<<< HEAD
             print("data has existed")
         }
         print("loadDataSuccessed")
+=======
+            print("GamenfoD is ok")
+        }
+        
+>>>>>>> origin/master
     }
 }

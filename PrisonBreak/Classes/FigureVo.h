@@ -18,7 +18,8 @@ public:
     int _speed;
     int _gold_coin;
     int _diamond;
-    void setData(int,int,int,int);
+    int _step;
+    void setData(int,int,int,int,int);
 };
 
 #endif /* defined(__PrisonBreak__FigureVo__) */
