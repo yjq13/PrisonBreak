@@ -13,11 +13,11 @@ class SystemInfo_deal: NSObject {
             let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
             let documentsDirectory = paths.objectAtIndex(0) as! NSString
             let path = documentsDirectory.stringByAppendingPathComponent("SystemInfo.plist")
-            var dict = NSDictionary(contentsOfFile: path)
+            let dict = NSDictionary(contentsOfFile: path)
 
-            var _voice: Bool = dict?.objectForKey("voice") as! Bool
-            var _sound: Bool = dict?.objectForKey("sound") as! Bool
-            var Gpo : SystemPo =  SystemPo(voice:_voice,sound:_sound)
+            let _voice: Bool = dict?.objectForKey("voice") as! Bool
+            let _sound: Bool = dict?.objectForKey("sound") as! Bool
+            let Gpo : SystemPo =  SystemPo(voice:_voice,sound:_sound)
             return Gpo
             }
     
@@ -25,7 +25,7 @@ class SystemInfo_deal: NSObject {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as! NSString
         let path = documentsDirectory.stringByAppendingPathComponent("SystemInfo.plist")
-        var dict = NSMutableDictionary(contentsOfFile: path)
+        let dict = NSMutableDictionary(contentsOfFile: path)
 
         dict?.setObject(po.voice, forKey: "voice")
         dict?.setObject(po.sound, forKey: "sound")

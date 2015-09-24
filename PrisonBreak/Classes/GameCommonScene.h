@@ -14,9 +14,11 @@ USING_NS_CC;
 class Game : public Layer{
 public:
     static Scene* createScene();
-    
+    PhysicsWorld* m_world;
     virtual bool init();
-    
+    void setPhyWorld(PhysicsWorld* world){
+    m_world=world;
+    };
     // a selector callback
     void setUI();
     
@@ -30,6 +32,9 @@ public:
     void onTouchEnded(Touch* touch,Event* event);
    // void onTouchCancel(Touch* touch,Event* event);
     bool isMoved;//用于判断是否画完线路
+    
+    //下面是检测碰撞的方法
+    bool onContactBegin(const PhysicsContact& contact);
     // implement the "static create()" method manually
     CREATE_FUNC(Game);
 };

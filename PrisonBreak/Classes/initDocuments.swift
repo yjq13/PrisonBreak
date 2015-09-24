@@ -17,11 +17,11 @@ class initDocument : NSObject {
         
         if(!fileManager.fileExistsAtPath(path)) {
         
-        var SystemInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("SystemInfo", ofType: "plist")!)
+        let SystemInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("SystemInfo", ofType: "plist")!)
         
-        var GameInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("GameInfo", ofType: "plist")!)
+        let GameInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("GameInfo", ofType: "plist")!)
         
-        var FigureInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("FigureInfo", ofType: "plist")!)
+        let FigureInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("FigureInfo", ofType: "plist")!)
         
         
         let path1 = documentsDirectory.stringByAppendingPathComponent("SystemInfo.plist")
@@ -33,8 +33,8 @@ class initDocument : NSObject {
         GameInfoD?.writeToFile(path2, atomically: false)
         FigureInfoD?.writeToFile(path3, atomically: false)
         }else{
-            println("data has existed")
+            print("data has existed")
         }
-        println("loadDataSuccessed")
+        print("loadDataSuccessed")
     }
 }

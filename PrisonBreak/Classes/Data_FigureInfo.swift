@@ -15,14 +15,14 @@ class FigureInfo_deal: NSObject {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as! NSString
         let path = documentsDirectory.stringByAppendingPathComponent("FigureInfo.plist")
-        var dict = NSDictionary(contentsOfFile: path)
+        let dict = NSDictionary(contentsOfFile: path)
         
-        var _LV:Int = dict?.objectForKey("LV") as! Int
-        var _speed:Int = dict?.objectForKey("speed") as! Int
-        var _gold_coin:Int = dict?.objectForKey("gold_coin") as! Int
-        var _diamond:Int = dict?.objectForKey("diamond") as! Int
+        let _LV:Int = dict?.objectForKey("LV") as! Int
+        let _speed:Int = dict?.objectForKey("speed") as! Int
+        let _gold_coin:Int = dict?.objectForKey("gold_coin") as! Int
+        let _diamond:Int = dict?.objectForKey("diamond") as! Int
         
-        var Gpo : FigurePo =  FigurePo(LV: _LV, speed: _speed, gold_coin: _gold_coin, diamond: _diamond)
+        let Gpo : FigurePo =  FigurePo(LV: _LV, speed: _speed, gold_coin: _gold_coin, diamond: _diamond)
         return Gpo
     }
     
@@ -30,7 +30,7 @@ class FigureInfo_deal: NSObject {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as! NSString
         let path = documentsDirectory.stringByAppendingPathComponent("FigureInfo.plist")
-        var dict = NSMutableDictionary(contentsOfFile: path)
+        let dict = NSMutableDictionary(contentsOfFile: path)
         
         dict?.setObject(po.speed, forKey: "speed")
         dict?.setObject(po.LV, forKey: "LV")
