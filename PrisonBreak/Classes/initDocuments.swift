@@ -16,18 +16,9 @@ class initDocument : NSObject {
         let pathF = documentsDirectory.stringByAppendingPathComponent("FigureInfo.plist")
         let fileManager = NSFileManager.defaultManager()
         
-<<<<<<< HEAD
-        if(!fileManager.fileExistsAtPath(path)) {
-        
-        let SystemInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("SystemInfo", ofType: "plist")!)
-        
-        let GameInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("GameInfo", ofType: "plist")!)
-        
-        let FigureInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("FigureInfo", ofType: "plist")!)
-=======
+
         if(!fileManager.fileExistsAtPath(pathS)) {
->>>>>>> origin/master
-        
+
         let SystemInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("SystemInfo", ofType: "plist")!)
             SystemInfoD?.writeToFile(pathS, atomically: false)
         }else{
@@ -49,14 +40,7 @@ class initDocument : NSObject {
             let GameInfoD = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("GameInfo", ofType: "plist")!)
             GameInfoD?.writeToFile(pathG, atomically: false)
         }else{
-<<<<<<< HEAD
-            print("data has existed")
-        }
-        print("loadDataSuccessed")
-=======
             print("GamenfoD is ok")
         }
-        
->>>>>>> origin/master
     }
 }
