@@ -23,6 +23,9 @@ bool Game::init(){
     }
     //计数器设为0
     index=0;
+    auto contactListener=EventListenerPhysicsContact::create();
+    contactListener->onContactBegin=CC_CALLBACK_1(Game::onContactBegin, this);
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
     setUI();
     return true;
 }
@@ -61,23 +64,24 @@ void Game::setUI(){
     auto sprite1=Sprite::create("00.jpg");
     sprite1->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     auto wallBody1=PhysicsBody::createBox(sprite1->getContentSize());
+    CCLOG("%f,%f",sprite1->getContentSize().width,sprite1->getContentSize().height);
     wallBody1->setGravityEnable(false);
-//    wallBody1->getShape(0)->setRestitution(1.0f);
-//    wallBody1->getShape(0)->setFriction(0.0);
-//    wallBody1->getShape(0)->setDensity(1.0);
-//    Vect force = Vect(500000.0f, 500000.0f);
-//    wallBody1->applyImpulse(force);
-    //sprite1->setPhysicsBody(wallBody1);
+    wallBody1->getShape(0)->setRestitution(1.0f);
+    wallBody1->getShape(0)->setFriction(0.0);
+    wallBody1->getShape(0)->setDensity(1.0);
+    Vect force = Vect(500000.0f, 500000.0f);
+    wallBody1->applyImpulse(force);
+    sprite1->setPhysicsBody(wallBody1);
     sprite1->setTag(1);
-    this->addChild(sprite1,1);
+    this->addChild(sprite1);
     
-    auto sprite2=Sprite::create("00.jpg");
+    auto sprite2=Sprite::create("01.jpg");
     sprite2->setPosition(Vec2(300 , 250));
     auto wallBody2=PhysicsBody::createBox(sprite2->getContentSize());
      wallBody2->setGravityEnable(false);
-    //sprite2->setPhysicsBody(wallBody2);
+    sprite2->setPhysicsBody(wallBody2);
     sprite2->setTag(2);
-    this->addChild(sprite2,2);
+    //this->addChild(sprite2);
 
     
     
@@ -85,12 +89,10 @@ void Game::setUI(){
     listener->onTouchMoved=CC_CALLBACK_2(Game::onTouchMoved, this);
     listener->onTouchBegan=CC_CALLBACK_2(Game::onTouchBegan, this);
     listener->onTouchEnded=CC_CALLBACK_2(Game::onTouchEnded, this);
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+    //_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     //下面检测碰撞
     
-    auto contactListener=EventListenerPhysicsContact::create();
-    contactListener->onContactBegin=CC_CALLBACK_1(Game::onContactBegin, this);
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(contactListener, this);
+    
     
 }
 
@@ -119,7 +121,10 @@ void Game::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event){
     printf("ed");
     //下面是主角跟随路线移动
     auto s=Sprite::create("01.jpg");
-    s->autorelease();
+    auto mainBox=PhysicsBody::createBox(s->getContentSize());
+    mainBox->setGravityEnable(false);
+    s->setPhysicsBody(mainBox);
+    //s->autorelease();
     s->setPosition(points[0]);
     addChild(s);
     //下面是填装动作的容器
@@ -136,15 +141,6 @@ void Game::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event){
 }
 
 bool Game::onContactBegin(const cocos2d::PhysicsContact &contact){
-    Sprite* spriteA = (Sprite*)contact.getShapeA()->getBody()->getNode();
-    Sprite* spriteB = (Sprite*)contact.getShapeB()->getBody()->getNode();
-    int tagA = spriteA->getTag();
-    int tagB = spriteB->getTag();
-    if ((tagA == 1 && tagB == 2)||(tagA == 2 && tagB == 1))
-    {
-        spriteA->removeFromParent();
-        spriteB->removeFromParent();
-    }
-    CCLOG("asdasdasdsad");
+     CCLOG("asdasdasdsad");
     return true;
 }
