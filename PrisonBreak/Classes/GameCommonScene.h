@@ -35,6 +35,8 @@ public:
     
     //下面是检测碰撞的方法
     bool onContactBegin(const PhysicsContact& contact);
+    Sprite* ballOne;
+    Sprite* ballTwo;
     // implement the "static create()" method manually
     CREATE_FUNC(Game);
 };
