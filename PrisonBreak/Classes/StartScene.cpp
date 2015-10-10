@@ -34,7 +34,8 @@ bool Start::init()
     }
     
     initDocuments();
-    
+    ALLINFO.setConstant();
+    printf("%d\n", ALLINFO.GOLD_COIN);
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     

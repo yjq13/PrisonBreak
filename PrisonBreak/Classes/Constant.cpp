@@ -26,6 +26,6 @@ void Constant::setConstant(){
     GOLD_COIN = Fvo._gold_coin;
     VOICE = Svo._voice;
     SOUND = Svo._sound;
-    printf("constant is OK");
+    printf("constant is OK\n");
 };
 

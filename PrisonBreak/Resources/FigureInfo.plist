@@ -7,7 +7,7 @@
 	<key>speed</key>
 	<integer>0</integer>
 	<key>gold_coin</key>
-	<integer>0</integer>
+	<integer>100000</integer>
 	<key>diamond</key>
 	<integer>0</integer>
 	<key>step</key>
